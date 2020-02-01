@@ -75,19 +75,27 @@ h2 {
 
 .navbar {
 	width: 90%;
-	position: fixed;
 	align-items: center;
 	justify-content: space-between;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	margin: 0 5%;
 	top: 0px;
-	background-color: azure;
+	position: fixed;
+	background-color: azure; 
 }
 
+nav {
+	width: 100%;
+	/* background-color: green; */
+	justify-content: space-around;
+}
+
+/* #logo-container {
+	background-color: blue;
+} */
+
 nav a {
-	padding: 5%;
-	margin: 0 10%;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 nav a {
@@ -208,24 +216,29 @@ h1 {
 .contact {
 	margin: 0 5%;
 	line-height: 1.5;
-}  */
+}  
 
 /* MEDIA QUERIES */
 
 /* TABLET MODE */
-@media screen only and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 	.navbar {
-		align-items: center;
-		flex-direction: column-reverse;
-		flex-wrap: wrap;
-		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		flex-flow: column-reverse wrap;
+		background-color: white;
 	}
 
-	.logo {
-		align-self: flex-end;
+	nav {
+		justify-content: space-around;;
 	}
 
-	.round-img, .top-section-img {
+
+	#logo-container {
+		justify-content: center;
+	}
+
+	.top-section-img, .round-img {
 		display: none;
 	}
 
@@ -233,6 +246,9 @@ h1 {
 		width: 100%;
 		justify-content: center;
 	}
+}
 
-
+/* MOBILE VIEW*/
+@media only screen and (max-width: 500px) {
+	
 }
