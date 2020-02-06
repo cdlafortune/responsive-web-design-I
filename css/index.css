@@ -1,3 +1,294 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.flex {
+	display: flex;
+}
+
+h2 {
+	font-size: 1.25em;
+}
+
+.navbar {
+	width: 90%;
+	align-items: center;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+	margin: 0 5%;
+	top: 0px;
+	position: fixed;
+	background-color: azure; 
+}
+
+nav {
+	width: 100%;
+	/* background-color: green; */
+	justify-content: space-around;
+}
+
+/* #logo-container {
+	background-color: blue;
+} */
+
+nav a {
+	justify-content: space-around;
+}
+
+nav a {
+	color: DarkSlateGray;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: black;
+}
+
+main {
+	margin: 5% 5%;
+	width: 90%;
+	height: auto;
+}
+
+footer p {
+	margin: 0 auto;
+	width: 200px;
+}
 
 
+
+/*Specific to Homepage*/
+.top-section {
+	padding-top: 10%;
+	justify-content: space-around;
+}
+
+.top-section-text, .top-section-img {
+	height: auto;
+	width: 50%;
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+h1 {
+	font-size: 5em;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	flex-flow: row wrap;
+	padding: 5%;
+}
+
+.btn {
+	border: 1px solid black;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	width: 30%;
+	margin: 0 auto;
+	background-color: white;
+	height: auto;
+	flex-flow: row nowrap;
+}
+
+.btn p {
+	padding: 10%;
+}
+
+.btn:hover {
+	background-color: black;
+	color: white;
+}
+
+
+.round-image {
+	padding: 5%;
+	width: 90%;
+	height: auto;
+}
+
+.page-divider {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	width: 100%;
+	height: auto;
+	margin: 5% 0;
+	text-align: left;
+	flex-flow: row wrap;
+} 
+
+.row-1 {
+	justify-content: space-around;
+}
+
+.features, .about {
+	width: 50%;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	padding: 5%;
+} 
+
+.row-2 {
+	width: 90%;
+	height: auto;
+	flex-flow: row nowrap;
+	justify-content: center;
+	padding: 5%;
+}
+
+.middle-img {
+	width: 100%;
+}
+
+.row-3 {
+	justify-content: space-between;
+}
+
+.services, .product, .vision {
+	width: 30%;
+	padding: 5%;
+	flex-flow: column wrap;
+}
+
+.contact {
+	margin: 0 5%;
+	line-height: 1.5;
+}  
+
+footer {
+	margin-top: 5%;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET MODE */
+@media only screen and (max-width: 800px) {
+	.navbar {
+		width: 100%;
+		margin: 0 auto;
+		flex-flow: column-reverse wrap;
+		background-color: lavender;
+	}
+
+	nav {
+		justify-content: space-around;;
+	}
+
+
+	#logo-container {
+		justify-content: center;
+	}
+
+	.top-section-img, .round-img {
+		display: none;
+	}
+
+	.top-section-text {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+/* MOBILE VIEW*/
+@media only screen and (max-width: 500px) {
+	.navbar{
+		background-color: honeydew;
+		display: flex;
+		position: relative;
+	}
+
+	nav {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	nav a {
+		/* border: 1px solid red; */
+		border-bottom: 1px solid black;
+		width: 90%;
+		margin: 0 auto;
+		padding: 5%;
+	}
+
+	.page-divider {
+		flex-direction: column;
+	}
+
+	.row-1, .row-2, .row-3 {
+		flex-direction: column;
+	}
+
+	.about, .features, .services, .product, .vision, .middle-img {
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+
+	} 
+}
